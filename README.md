@@ -65,6 +65,6 @@ The app leverages the openpyxl library to read passwords from Excel files.
 The app incorporates message boxes to inform users about errors, warnings, or successful operations.
 
 12. Execution Flow
-  i. On the first run, the app prompts the user to register.
-  ii. If user data exists, it opens the login window.
-  iii. After a successful login, the main application window is displayed for managing passwords.
+  a. On the first run, the app prompts the user to register.
+  b. If user data exists, it opens the login window.
+  c. After a successful login, the main application window is displayed for managing passwords.
