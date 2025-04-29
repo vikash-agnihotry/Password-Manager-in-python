@@ -1,73 +1,41 @@
-The PasswordManager file in this repository is a Python-based password manager application that utilizes the tkinter library for a graphical user interface (GUI) and provides features for secure password management. Here's a breakdown of its functionality:
+# Password Manager 5.1
 
-Key Features
-1. User Registration & Authentication:
+Password Manager 5.1 is a comprehensive password management tool written in Python. It allows users to securely store, manage, and retrieve passwords, sensitive notes, encrypted files, banking details, and personal IDs. The application also includes features for password generation, health monitoring, and license activation.
 
-Users can register with a username, password, and a secret key for password recovery.
-Passwords are hashed using bcrypt for secure storage.
-The secret key is encrypted using the cryptography.Fernet library.
+## Features
 
-2. Password Management:
+### Password Management
+- Save, retrieve, update, and delete passwords for different websites and services.
+- Auto-generate strong passwords with customizable length and complexity.
+- Import passwords from Excel files and export them to Excel or PDF for backup.
+- Password health dashboard for analyzing password strength and reuse.
 
-Users can save credentials (website, username, and password).
-Passwords are stored in encrypted form using Fernet encryption.
-Password Generation:
+### File Encryption
+- Encrypt and decrypt files using secure encryption algorithms.
+- Manage encrypted files with options to view, decrypt, and delete them.
+- Compatible with images and videos, allowing decrypted previews.
 
-The app provides functionality to generate random strong passwords.
+### Secure Notes
+- Create, view, and delete encrypted secret notes.
+- Export notes to text files for external storage.
 
-3. Password Retrieval:
+### Banking Details Manager
+- Save and manage banking details, including credit card and account information.
+- Export banking details to Excel or PDF.
 
-Users can view stored passwords after decrypting them securely.
+### Personal ID Management
+- Save and manage personal IDs such as Aadhaar, PAN, driving licenses, and vehicle registrations.
+- Add custom IDs with validation.
 
-4. Password Deletion:
+### License Management
+- Supports trial and permanent license activation.
+- Trial mode allows 10 uses before requiring an upgrade to a permanent license.
 
-Users can selectively delete stored passwords via a GUI.
+### Backup and Restore
+- Backup user data, including passwords, notes, and banking details, as encrypted ZIP files.
+- Restore data selectively or entirely from backup files.
 
-5. Password Import:
+### Security Features
+- AES encryption using the `cryptography` library to protect sensitive data.
+- Data integrity checks and device binding for license validation.
 
-The app can import passwords from an Excel file (.xlsx), resolving duplicates or conflicts.
-
-6. Account Deletion:
-
-Users can delete their account, with an option to export saved passwords to a file.
-
-7. Forgot Password:
-
-Users can reset their password using the previously provided secret key.
-
-8. GUI Design:
-
-The application uses tkinter for a multi-window GUI with features like:
-Login and registration windows.
-Password search and retrieval.
-Buttons, labels, text areas, and checkboxes for user interaction.
-
-Technical Details
-
-9. Encryption:
-
-A Fernet key is generated on the first run and stored securely.
-All sensitive data (passwords and secret keys) is encrypted.
-
-10. Data Storage:
-
-User data and passwords are stored in a local directory (passmgr_data).
-Files are encrypted to prevent unauthorized access.
-Hashing:
-
-bcrypt is used to hash passwords before storing them.
-Excel Import:
-
-The app leverages the openpyxl library to read passwords from Excel files.
-
-11. Error Handling:
-
-The app incorporates message boxes to inform users about errors, warnings, or successful operations.
-
-12. Execution Flow
-    
-  a. On the first run, the app prompts the user to register.
-  
-  b. If user data exists, it opens the login window.
-  
-  c. After a successful login, the main application window is displayed for managing passwords.
